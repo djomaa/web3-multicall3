@@ -26,6 +26,14 @@
   "files": [
     "dist/**/*"
   ],
+  "exports": {
+    ".": {
+      "default": "./dist/index.js"
+    },
+    "./plugin": {
+      "default": "./dist/plugin/index.js"
+    }
+  },
   "peerDependencies": {
     "web3": ">= 4.0.2 < 5"
   },
