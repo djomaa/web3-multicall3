@@ -1,6 +1,6 @@
 {
   "name": "web3-multicall3",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "scripts": {
     "build": "tsc",
     "test": "jest"
