@@ -8,7 +8,11 @@
 - [Installation](#installation)
 - [Usage](#usage)
   - [createContractCall](#createcontractcall)
+  - [Examples](#examples)
+  - [Demo code](#demo)
 - [Tests](#tests)
+
+
 
 ## Installation
 ```
@@ -33,13 +37,20 @@ const [someFunctionResponse] = await multicall.aggregate3([
 
 ### createContractCall
 A utility that provides type support for proper use of web3 contract
+
+### Demo 
+- NodeJS
+- Browser
+- React TypeScript
+- React JavaScript
 #### Parameters
 * contract - web3.eth.contract
 * fnName - function name (obtained from provided contract)
 * args - arguments of selected function (types are validated)
 
 ## Examples
-* [`USDC example`](./examples/usdc.example.ts) - fetching USDC contract owner and balance of zero address
+* [`USDC example`](./demo/node/usdc.example.ts) - fetching USDC contract owner and balance of zero address
+* [`USDC example (plugin)`](./demo/node/usdc-plugin.example.ts) - Web3Multicall3Pluge usage
 
 
 ## Tests
