@@ -1,10 +1,7 @@
-import Web3, { AbiParameter, Contract } from 'web3';
-import { Multicall3Abi } from './constants/multicall3.abi';
-import { MulticallRequest, MulticallResponse } from './types';
-import { CallFailedError } from './errors/call-failed.error';
-import { createContractCall } from './create-contract-call';
-import { BaseWeb3Multicall3 } from './web3-multicall3.base';
-import { DefaultAddress } from './constants/config.constants';
+import Web3 from 'web3';
+import { Multicall3Abi } from './constants/multicall3.abi.js';
+import { BaseWeb3Multicall3 } from './web3-multicall3.base.js';
+import { DefaultAddress } from './constants/config.constants.js';
 
 interface Web3Multicall3Parameters {
   web3: Web3;

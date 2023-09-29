@@ -3,7 +3,7 @@
 	"compilerOptions": {
 		"outDir": "./dist/esm",
 		"esModuleInterop": true,
-		"module": "es2020"
+		"module": "ES6"
 	},
 	"include": ["src/**/*"]
 }
