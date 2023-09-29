@@ -1,6 +1,6 @@
 {
   "name": "web3-multicall3",
-  "version": "0.2.0-beta.0",
+  "version": "0.2.0-beta.1",
   "scripts": {
     "build": "concurrently --kill-others-on-fail \"yarn:build:*\"",
     "build:esm": "tsc --build tsconfig.cjs.json && echo '{\"type\": \"commonjs\"}' > ./dist/cjs/package.json",
