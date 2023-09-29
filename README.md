@@ -10,6 +10,10 @@
   - [createContractCall](#createcontractcall)
   - [Examples](#examples)
   - [Demo code](#demo)
+    - [`NodeJS`](./demo/node/)
+    - [`Browser`](./demo/html/)
+    - [`React TypeScript`](./demo/react-ts/)
+    - [`React JavaScript`](./demo/react-js/)
 - [Tests](#tests)
 
 
@@ -39,10 +43,10 @@ const [someFunctionResponse] = await multicall.aggregate3([
 A utility that provides type support for proper use of web3 contract
 
 ### Demo 
-- NodeJS
-- Browser
-- React TypeScript
-- React JavaScript
+- [`NodeJS`](./demo/node/)
+- [`Browser`](./demo/html/)
+- [`React TypeScript`](./demo/react-ts/)
+- [`React JavaScript`](./demo/react-js/)
 #### Parameters
 * contract - web3.eth.contract
 * fnName - function name (obtained from provided contract)
