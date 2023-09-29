@@ -1,25 +1,13 @@
-/*
-This file is part of web3.js.
-
-web3.js is free software: you can redistribute it and/or modify
-it under the terms of the GNU Lesser General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-web3.js is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU Lesser General Public License for more details.
-
-You should have received a copy of the GNU Lesser General Public License
-along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
-const webpack = require('webpack');
+// const webpack = require('webpack');
 const path = require('path');
 
 /**
- * Shared webpack configuration for all packages
+ * @param packagePath repo root folder
+ * @param filename resulting file name
+ * @param name of resulting global varaible AND name of class exported from entry file
+ * @param entry source file path
+ * @param tsconf tsconfig path
+ * @description Shared webpack configuration for all packages
  */
 function getWebPackConfig(packagePath, filename, library, entry, tsconf) {
   return {
@@ -29,7 +17,7 @@ function getWebPackConfig(packagePath, filename, library, entry, tsconf) {
       path: path.resolve(packagePath, 'dist', 'web'),
       filename: filename,
       library: library,
-      libraryExport: 'default',
+      libraryExport: library,
       libraryTarget: 'umd',
       globalObject: 'this',
     },
@@ -59,22 +47,11 @@ function getWebPackConfig(packagePath, filename, library, entry, tsconf) {
       },
     },
     devtool: 'source-map',
-    plugins: [
-      new webpack.IgnorePlugin({
-        checkResource(resource) {
-          // "@ethereumjs/common/genesisStates" consists ~800KB static files which are no more needed
-          return /(.*\/genesisStates\/.*\.json)/.test(resource);
-        },
-      }),
-      new webpack.ProvidePlugin({
-        process: 'process/browser',
-      }),
-    ],
   };
 }
 
-const filename = 'web3-multicall3.min.js';
-const library = 'web3-multicall3';
-const entry = 'src/index.ts';
 const tsconf = 'tsconfig.cjs.json'
-module.exports = getWebPackConfig(__dirname, filename, library, entry, tsconf)
+module.exports = [
+  getWebPackConfig(__dirname, 'web3-multicall3.min.js', 'Web3Multicall3', 'src/index.ts', tsconf),
+  getWebPackConfig(__dirname, 'web3-multicall3-plugin.min.js', 'Web3Multicall3Plugin', 'src/plugin/index.ts', tsconf),
+];
