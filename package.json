@@ -12,9 +12,12 @@
   "keywords": [
     "typescript",
     "type-safe",
+    "web3",
     "multicall3",
     "multicall",
-    "web3"
+    "browser",
+    "esm",
+    "commonjs"
   ],
   "author": {
     "name": "Demid Mosko",
@@ -27,6 +30,7 @@
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
+  "browser": "dist/web3/index.min.js",
   "files": [
     "dist/**/*"
   ],
