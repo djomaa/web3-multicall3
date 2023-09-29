@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "serve": "^14.2.1",
+    "web3": "^4.1.2",
+    "web3-multicall3": "0.2.0-beta.3"
+  }
+}

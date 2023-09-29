@@ -1,8 +1,3 @@
-/*
-yarn add web3
-yarn add web3-multicall3
-*/
-
 import Web3 from 'web3';
 import { Web3Multicall3, createContractCall } from 'web3-multicall3';
 export const UsdcAbi = [
@@ -49,10 +44,12 @@ async function main() {
   });
 
   const usdc = new web3.eth.Contract(UsdcAbi, '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48');
-  const [owner, balance] = await multicall.aggregate3([
+  const result = await multicall.aggregate3([
     createContractCall(usdc, 'owner', []),
     createContractCall(usdc, 'balanceOf', ['0x0000000000000000000000000000000000000000']),
   ]);
 }
 
 main()
+
+

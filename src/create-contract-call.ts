@@ -1,7 +1,7 @@
 import Contract from 'web3-eth-contract';
 import { AbiFunctionFragment, ContractAbi, ContractMethodInputParameters, FilterAbis } from 'web3-types';
-import { MulticallRequest } from './types';
-import { ContractHasNoAddressError } from './errors/contract-has-no-address.error';
+import { MulticallRequest } from './types.js';
+import { ContractHasNoAddressError } from './errors/contract-has-no-address.error.js';
 
 export function createContractCall<
   TAbi extends ContractAbi,

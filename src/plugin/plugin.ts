@@ -1,7 +1,7 @@
 import { Contract, Web3Context, Web3PluginBase } from 'web3';
 import { BaseWeb3Multicall3 } from '../web3-multicall3.base';
-import { Multicall3Abi } from '../constants/multicall3.abi';
-import { DefaultAddress } from '../constants/config.constants';
+import { Multicall3Abi } from '../constants/multicall3.abi.js';
+import { DefaultAddress } from '../constants/config.constants.js';
 
 export class Web3Multicall3Plugin extends Web3PluginBase {
   public pluginNamespace = 'multicall';

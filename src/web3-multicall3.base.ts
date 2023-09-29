@@ -1,9 +1,10 @@
-import Web3, { AbiParameter, Contract } from 'web3';
-import { Multicall3Abi } from './constants/multicall3.abi';
-import { MulticallRequest, MulticallResponse } from './types';
-import { CallFailedError } from './errors/call-failed.error';
-import { createContractCall } from './create-contract-call';
+import { AbiParameter, Contract } from 'web3';
 import * as AbiCoder from 'web3-eth-abi';
+
+import { Multicall3Abi } from './constants/multicall3.abi.js';
+import { MulticallRequest, MulticallResponse } from './types.js';
+import { CallFailedError } from './errors/call-failed.error.js';
+import { createContractCall } from './create-contract-call.js';
 
 export class BaseWeb3Multicall3 {
   createContractCall = createContractCall;
