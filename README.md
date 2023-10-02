@@ -5,6 +5,8 @@
 [`Multicall3`](https://www.multicall3.com/) is a library for batching contract calls.
 `Web3-multicall3` is a type-safe [`multicall3 contract`](https://github.com/mds1/multicall/blob/main/src/Multicall3.sol) wrapper
 
+![Usage example with types output](./demo/example.jpeg)
+
 - [Installation](#installation)
 - [Usage](#usage)
   - [createContractCall](#createcontractcall)
@@ -42,7 +44,7 @@ const [someFunctionResponse] = await multicall.aggregate3([
 ### createContractCall
 A utility that provides type support for proper use of web3 contract
 
-### Demo 
+### Demo
 - [`NodeJS`](./demo/node/)
 - [`Browser`](./demo/html/)
 - [`React TypeScript`](./demo/react-ts/)
