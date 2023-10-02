@@ -1,6 +1,6 @@
 {
   "name": "web3-multicall3",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "scripts": {
     "build": "concurrently --kill-others-on-fail \"yarn:build:*\"",
     "prebuild": "rimraf dist",
